@@ -1,0 +1,111 @@
+body{
+    background-image: url(image-bn80z27w.png);
+   
+
+    --size:40vh;
+    --count: 7;
+    --top-marker:calc(2.2vh);
+    --bottom-marker:calc( var(--size) * 0.92 * 0.75 );
+}
+
+   
+
+.movies{
+    width: var(--size);
+    height: var(--size);
+    background-color:rgb(27, 27, 35);
+    margin-top:calc((100vh - var(--size) )/2 );
+    margin-left: calc(100vw / 3 - var(--size) / 2 );
+    border-radius: 50vw;
+}
+.movies .film{
+    /*background-color: #333;*/
+    height: calc( var(--size) * 0.75 );
+    width: calc( var(--size) * 100);
+    margin-left: calc(-40vw );
+    margin-top: calc((5vh));
+    position: absolute;
+    overflow: hidden;
+    width: calc(var(--count) * (var(--size) * 0.92 * 0.75 * 4/3 + 1vh));
+
+ background-image:linear-gradient(transparent , transparent var(--top-marker),#1239 var(--top-marker),#1239  var(--bottom-marker),transparent var(--bottom-marker)),
+ radial-gradient(transparent 50%, #1239 50%),
+ radial-gradient(transparent 50%, rgba(18, 24, 62, 0.6) 50%);
+
+ background-size: 
+ cover,
+ var(--top-marker) var(--top-marker),
+ var(--top-marker) var(--top-marker);
+
+ background-repeat: 
+ repeat,
+ repeat-x,
+ repeat-x;
+  
+ background-position:
+ top left,
+ top left,
+ bottom left;
+}
+
+.movies .film img{
+   /* display: none;*/
+   height: calc( var(--size) * 0.92 * 0.75 );
+   margin-top:calc(2.2vh) ;
+   margin-left: calc( 0 0.5vh );
+}
+.movies .controls{
+   position: absolute;
+   
+   margin-top: calc((4vh));
+   margin-left: calc(4vw);
+   
+    background-color:#123;
+    height: calc( var(--size) * 0.8 );
+    width: calc( var(--size) * 0.8);
+
+    border-radius: 50vw;
+   
+    opacity: 0.8;
+} 
+.movies .controls .btn{
+    height: calc( var(--size) * 0.2 );
+    width: calc( var(--size) * 0.4);
+
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin:auto;
+   
+ border-radius: 50vw;
+
+}
+ .btn::before{
+    content: "";
+    display: inline-block;
+    width: 5vw;
+    height: 5vh;
+    vertical-align: middle;
+  
+    background-repeat: no-repeat;
+   
+  
+ }
+ .btn-uploud::before{
+   
+    -webkit-mask-image: url(play.svg); 
+}
+
+.btn-std{
+    border:1px solid  rgb(78, 108, 237);
+    color:rgb(78, 108, 237);
+}
+.btn-std::before{
+    background-color:rgb(78, 108, 237);
+}
+.btn:hover{
+    background-color: white;
+}
+ 
